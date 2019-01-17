@@ -1,0 +1,16 @@
+html
+	head
+		title= 'Person List'
+		style
+			include style.css
+	body
+		h1= 'Person List'
+	table
+		each person, i in personList
+			tr
+				td= person.empid
+				td
+					a(href='/person/'+person.id) #{person.firstname}
+				td= person.lastname
+				td= person.city
+
